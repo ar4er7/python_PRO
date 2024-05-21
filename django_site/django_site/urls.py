@@ -17,13 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from python_PRO.django_site.members_app.views import input_page, output_page
-from python_PRO.django_site.courses_app.views import is_authenticated
+from members_app.views import input_info, output_info
+from courses_app.views import is_authenticated
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("input/", input_page),
-    path("show/", output_page),
+    path("input/", input_info),
+    path("show/", output_info),
     path("is-authenticated/", is_authenticated),
 ]

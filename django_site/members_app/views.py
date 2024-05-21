@@ -1,9 +1,9 @@
 from django.shortcuts import render
 
 
-def input_page(request):
+def input_info(request):
     return render(request, "input_page.html")
 
 
-def output_page(request):
+def output_info(request):
     return render(request, "output_page.html")
