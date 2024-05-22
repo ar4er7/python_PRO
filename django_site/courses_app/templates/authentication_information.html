@@ -1,13 +1,14 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>auth_info</title>
-</head>
-<body>
-<h1>Information about user authorization</h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Authorization page</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h3 class="d-flex p-2">Информация об авторизации пользователя:</h3><br>
+        <div class="d-flex p-2 container">
+            <p class="bg-success p-2 text-dark bg-opacity-10">{{ message }}</p>
+        </div>
+    </div>
+{% endblock %}

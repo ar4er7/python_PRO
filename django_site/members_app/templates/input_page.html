@@ -1,13 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+{% extends "base.html" %}
+
+{% block title %}
     <title>Input page</title>
-</head>
-<body>
-    <h1>Input</h1>
-</body>
-</html>
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h3>User's input</h3><br>
+        <form method="post" id="user_input_form">{% csrf_token %}
+            <div class="mb-3">
+                <label for="user_input" class="form-label">type here</label>
+                <input type="text" class="form-control" id="user_input" name="user_input">
+            </div>
+            <button type="submit" class="btn btn-primary">send</button>
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,13 +1,18 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>output page</title>
-</head>
-<body>
-    <h1>Show</h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Output page</title>
+{% endblock %}
+
+{% block body %}
+
+    <div class="container overflow-hidden">
+        <h3>Result</h3>
+        <div class="alert alert-warning alert-dismissible fade show gx-10" role="alert">
+            Here's the text: <br> <strong>{{ user_input }}</strong>
+        </div>
+        <div>
+            <a href="{% url "input_information" %}" class="btn btn-primary"> Назад</a>
+        </div>
+    </div>
+{% endblock %}
